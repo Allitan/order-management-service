@@ -15,7 +15,7 @@ export function createTypeOrmOptions(
     ssl: databaseConfiguration.ssl
       ? { rejectUnauthorized: false }
       : false,
-    synchronize: false,
+    synchronize: true,
     entities: [join(__dirname, '../**/*.entity{.ts,.js}')],
     migrationsTableName: 'migrations',
     migrations: [join(__dirname, 'migrations/*{.ts,.js}')],
